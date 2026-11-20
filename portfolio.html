@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio | DF Exposure</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,wght@9..144,100,400..600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="DF Exposure home"><img src="logo.png" alt="DF Exposure"></a>
+  <button type="button" class="menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  <ul>
+    <li><a class="link" href="index.html#about">About</a></li>
+    <li><a class="link" href="index.html#work">My Work</a></li>
+    <li><a class="link" href="index.html#contact">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="page" style="max-width:1100px">
+    <h2>Full Portfolio</h2>
+    <div class="filters" role="group" aria-label="Filter work">
+      <button data-filter="all" aria-pressed="true">All</button>
+      <button data-filter="photo" aria-pressed="false">Photography</button>
+      <button data-filter="video" aria-pressed="false">Videography</button>
+    </div>
+    <div id="gallery" class="grid"></div>
+  </section>
+
+  <section id="contact">
+    <div class="ripples" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <h2>Contact</h2>
+    <div class="details">
+      <a data-email href="mailto:youremail@example.com">youremail@example.com</a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" rel="noopener">Instagram: @YOUR_INSTAGRAM</a>
+    </div>
+    <a class="btn" href="query.html">Submit a query</a>
+  </section>
+</main>
+
+<div id="lightbox" class="lb" aria-label="Enlarged photo"><button aria-label="Close">&times;</button><img alt=""></div>
+<footer>&copy; <script>document.write(new Date().getFullYear())</script> DF Exposure</footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+  if(!btn||!menu)return;
+  function set(o){menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu';}
+  btn.addEventListener('click',function(e){e.stopPropagation();set(!menu.classList.contains('open'));});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DF Exposure | Photography &amp; Videography</title>
+<meta name="description" content="Portfolio of DF Exposure, photographer and videographer.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,wght@9..144,100,400..600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="DF Exposure home"><img src="logo.png" alt="DF Exposure"></a>
+  <button type="button" class="menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  <ul>
+    <li><a class="link" href="#about">About</a></li>
+    <li><a class="link" href="#work">My Work</a></li>
+    <li><a class="link" href="#contact">Contact</a></li>
+  </ul>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="ripples" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <img class="logo-img" src="logo.png" alt="DF Exposure logo">
+    <p class="tagline">Photography &amp; videography</p>
+    <nav class="quick" aria-label="Quick links">
+      <a href="#about">About</a>
+      <a href="#work">My Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a photographer and videographer based in Ireland. Write a few lines here about your style, what you shoot, and what clients can expect when they work with you.</p>
+  </section>
+
+  <section id="work">
+    <h2>My Work</h2>
+    <div id="featured" class="grid"></div>
+    <div class="more"><a class="btn" href="portfolio.html">View full portfolio</a></div>
+  </section>
+
+  <section id="contact">
+    <div class="ripples" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <h2>Contact</h2>
+    <div class="details">
+      <a data-email href="mailto:youremail@example.com">youremail@example.com</a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" rel="noopener">Instagram: @YOUR_INSTAGRAM</a>
+    </div>
+    <a class="btn" href="query.html">Submit a query</a>
+  </section>
+</main>
+
+<footer>&copy; <script>document.write(new Date().getFullYear())</script> DF Exposure</footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+  if(!btn||!menu)return;
+  function set(o){menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu';}
+  btn.addEventListener('click',function(e){e.stopPropagation();set(!menu.classList.contains('open'));});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
