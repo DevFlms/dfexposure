@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | DF Exposure</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,wght@9..144,100,400..600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="DF Exposure home"><img src="logo.png" alt="DF Exposure"></a>
+  <button type="button" class="menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  <ul>
+    <li><a class="link" href="index.html#about">About</a></li>
+    <li><a class="link" href="work.html">My Work</a></li>
+    <li><a class="link" href="index.html#contact">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+  <div class="page prose">
+    <h2>Privacy Policy</h2>
+    <p class="note">Last updated: 21 November 2026</p>
+
+    <h3>1. Data Controller</h3>
+    <p>This website is operated by [YOUR FULL NAME], trading as DF Exposure (&ldquo;DF Exposure&rdquo;), a photography and videography business based in Ireland. DF Exposure is the data controller in respect of personal data collected through this website. Enquiries relating to this policy may be directed to <a data-email href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+
+    <h3>2. Personal Data Collected</h3>
+    <p>Personal data is collected only where an individual submits it voluntarily through the &ldquo;Submit a query&rdquo; form or by email. This comprises:</p>
+    <ul>
+      <li>name and email address;</li>
+      <li>the service requested and any date or timeframe stated; and</li>
+      <li>the content of the message, including any further information the individual chooses to provide.</li>
+    </ul>
+    <p>Individuals are requested not to include special category data (for example, health information) in their messages.</p>
+
+    <h3>3. Purpose and Legal Basis of Processing</h3>
+    <p>Personal data is processed in order to review the enquiry, respond to the individual and, where applicable, discuss a prospective engagement. The legal basis for this processing is the taking of steps, at the request of the individual, prior to entering into a contract (Article 6(1)(b) GDPR) or, alternatively, the legitimate interest of DF Exposure in responding to enquiries regarding its services (Article 6(1)(f) GDPR). Personal data is not used for direct marketing and is not sold or disclosed for advertising purposes.</p>
+
+    <h3>4. Recipients of Personal Data</h3>
+    <p>Personal data submitted through the enquiry form is disclosed to the following recipients:</p>
+    <ul>
+      <li><strong>Formspree</strong> (formspree.io), a form-processing service which transmits submissions from this website to DF Exposure. Formspree acts as a processor on behalf of DF Exposure and may process data outside the European Economic Area, subject to the safeguards described in its own privacy policy and data processing terms.</li>
+      <li><strong>The email service provider</strong> of DF Exposure, through which submissions are received and stored.</li>
+    </ul>
+    <p>Personal data is not otherwise disclosed to third parties, save where required by law.</p>
+
+    <h3>5. Retention</h3>
+    <p>Enquiries that do not result in a booking are deleted within twelve (12) months of receipt. Where an enquiry results in an engagement, records are retained for the period required to perform the engagement and to satisfy applicable legal, accounting and tax obligations.</p>
+
+    <h3>6. Rights of Individuals</h3>
+    <p>Subject to applicable law, individuals have the right to request access to their personal data, rectification, erasure, restriction of processing, data portability, and to object to processing. Where processing is based on consent, that consent may be withdrawn at any time. Requests may be made by email to the address in section 1 and will be answered within one month of receipt.</p>
+
+    <h3>7. Cookies, Hosting and Third-Party Content</h3>
+    <p>This website does not use cookies, analytics or advertising trackers. The following should, however, be noted:</p>
+    <ul>
+      <li>Fonts are loaded from Google Fonts, as a result of which the IP address of the visitor is transmitted to Google when a page is loaded.</li>
+      <li>This website is hosted on GitHub Pages. GitHub may keep technical server logs, including IP addresses, in accordance with its own privacy statement.</li>
+      <li>The &ldquo;My Work&rdquo; page contains links to videos hosted on Instagram. Following such a link takes the visitor to a service operated by Meta Platforms, whose privacy policy applies to any data collected thereafter. DF Exposure has no control over that processing.</li>
+    </ul>
+
+    <h3>8. Complaints</h3>
+    <p>An individual who considers that their personal data has been processed in breach of data protection law may lodge a complaint with the Data Protection Commission of Ireland at <a href="https://www.dataprotection.ie" target="_blank" rel="noopener">www.dataprotection.ie</a>. DF Exposure invites individuals to raise any concern directly in the first instance.</p>
+
+    <h3>9. Amendments</h3>
+    <p>This policy may be amended from time to time. The date of the most recent revision is shown at the top of this page.</p>
+  </div>
+</main>
+
+<footer>&copy; <script>document.write(new Date().getFullYear())</script> DF Exposure &middot; <a href="privacy.html">Privacy Policy</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+  if(!btn||!menu)return;
+  function set(o){menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu';}
+  btn.addEventListener('click',function(e){e.stopPropagation();set(!menu.classList.contains('open'));});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

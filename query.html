@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit a Query | DF Exposure</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,SOFT,wght@9..144,100,400..600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="DF Exposure home"><img src="logo.png" alt="DF Exposure"></a>
+  <button type="button" class="menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  <ul>
+    <li><a class="link" href="index.html#about">About</a></li>
+    <li><a class="link" href="work.html">My Work</a></li>
+    <li><a class="link" href="index.html#contact">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+  <div class="page">
+    <h2>Submit a Query</h2>
+    <p class="note" style="margin-bottom:2rem">Tell me about your shoot or video and I'll reply by email.</p>
+    <form id="query-form">
+      <label>Name <input name="name" required autocomplete="name"></label>
+      <label>Email <input name="email" type="email" required autocomplete="email"></label>
+      <label>What do you need?
+        <select name="service">
+          <option>Photography</option>
+          <option>Videography</option>
+          <option>Photography and videography</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Date or timeframe (optional) <input name="date"></label>
+      <label>Message <textarea name="message" required></textarea></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="consent">By sending this, you agree to my using your details to reply to your query, as explained in the <a href="privacy.html">Privacy Policy</a>.</p>
+      <button class="btn" type="submit">Send query</button>
+      <p id="status" class="note" role="status"></p>
+    </form>
+  </div>
+
+  <section id="contact">
+    <div class="ripples" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <h2>Contact</h2>
+    <div class="details">
+      <a data-email href="mailto:youremail@example.com">youremail@example.com</a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" rel="noopener">Instagram: @YOUR_INSTAGRAM</a>
+    </div>
+    <a class="btn" href="index.html">Back to home</a>
+  </section>
+</main>
+
+<footer>&copy; <script>document.write(new Date().getFullYear())</script> DF Exposure &middot; <a href="privacy.html">Privacy Policy</a></footer>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),menu=document.querySelector('.nav ul');
+  if(!btn||!menu)return;
+  function set(o){menu.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu';}
+  btn.addEventListener('click',function(e){e.stopPropagation();set(!menu.classList.contains('open'));});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(!e.target.closest('.nav'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
