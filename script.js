@@ -1,6 +1,6 @@
 // ===== SETTINGS (edit these) =====
-const EMAIL = "youremail@example.com";
-const FORMSPREE_URL = "https://formspree.io/f/YOUR_FORM_ID"; // see README
+const EMAIL = "dev@dfexposure.ie";
+const FORMSPREE_URL = "https://formspree.io/f/myewdezg"; // see README
 // =================================
 
 // Fill in email links
